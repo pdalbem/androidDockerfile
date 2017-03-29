@@ -38,13 +38,14 @@ RUN echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licens
 RUN echo -e "\nd975f751698a77b662f1254ddbeed3901e976f5a" > "$ANDROID_HOME/licenses/intel-android-extra-license"
 RUN (while [ 1 ]; do sleep 5; echo y; done) | ${ANDROID_HOME}/tools/android update sdk -u -a -t ${SDK_PACKAGES}
 # RVM & Ruby needed for fastlane below
-RUN \curl -L https://get.rvm.io | bash -s stable
-RUN /bin/bash -l -c "rvm requirements"
-RUN /bin/bash -l -c "rvm install 2.4"
-RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
+
+#RUN \curl -L https://get.rvm.io | bash -s stable
+#RUN /bin/bash -l -c "rvm requirements"
+#RUN /bin/bash -l -c "rvm install 2.4"
+#RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
 # Fast lane for easy apk upload to hockey app
 #RUN /bin/bash -l -c "gem install fastlane --no-document"
-RUN /bin/bash -l -c "gem install fastlane --no-rdoc --no-ri"
+#RUN /bin/bash -l -c "gem install fastlane --no-rdoc --no-ri"
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get autoremove -y && \
     apt-get clean
