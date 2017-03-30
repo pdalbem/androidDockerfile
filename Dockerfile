@@ -1,4 +1,5 @@
-FROM bitriseio/docker-android:latest
+#FROM bitriseio/docker-android:latest
+FROM bitriseio/docker-bitrise-base:latest
 ENV ANDROID_HOME /opt/android-sdk-linux
 RUN dpkg --add-architecture i386
 RUN apt-get update -qq
