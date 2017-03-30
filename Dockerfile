@@ -3,7 +3,8 @@ FROM bitriseio/docker-bitrise-base:latest
 ENV ANDROID_HOME /opt/android-sdk-linux
 RUN dpkg --add-architecture i386
 RUN apt-get update -qq
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y  openjdk-8-jdk libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386
+                                                                              
 ENV VERSION_SDK_TOOLS "25.2.5"
 ENV VERSION_BUILD_TOOLS "25.0.2"
 ENV VERSION_TARGET_SDK "25"
