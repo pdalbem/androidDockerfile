@@ -34,7 +34,7 @@ RUN echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > $ANDROID_HOME/licenses/and
 #RUN echo -e "\nd975f751698a77b662f1254ddbeed3901e976f5a" > "$ANDROID_HOME/licenses/intel-android-extra-license"
 #RUN (while [ 1 ]; do sleep 5; echo y; done) | ${ANDROID_HOME}/tools/android update sdk -u -a -t ${SDK_PACKAGES}
 
-RUN (while [ 1 ]; do sleep 5; echo y; done) | ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;26.0.1" "platforms;android-26" "add-ons;addon-google_apis-google-25" "platform-tools" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository"
+RUN (while [ 1 ]; do sleep 5; echo y; done) | ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;26.0.1" "platforms;android-26" "add-ons;addon-google_apis-google-24" "platform-tools" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository"
 
 
 RUN apt-get clean
