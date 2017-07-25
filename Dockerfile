@@ -16,19 +16,17 @@ ENV SDK_PACKAGES '"build-tools;${VERSION_BUILD_TOOLS}" "platforms;android-${VERS
 # --- Download Android SDK tools into $ANDROID_HOME
 #RUN cd /opt && wget -q https://dl.google.com/android/repository/tools_r${VERSION_SDK_TOOLS}-linux.zip -O android-sdk-tools.zip
 
-RUN cd /opt && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -O android-sdk-tools.zip \ 
-            &&  unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
-            &&  && rm -f android-sdk-tools.zip
+RUN cd /opt \
+    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3952940.zip -O android-sdk-tools.zip \
+    && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
+    && rm -f android-sdk-tools.zip
 
-RUN mkdir -p ${ANDROID_HOME}
-RUN cd /opt && mv tools/ ${ANDROID_HOME}/tools/
-RUN cd /opt && rm -f android-sdk-tools.zip
-ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
 
 RUN mkdir -p $ANDROID_HOME/licenses/
 RUN echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > $ANDROID_HOME/licenses/android-sdk-license
 
-RUN yes | sdkmanager --licenses
+#RUN yes | sdkmanager --licenses
 
 #RUN mkdir -p "$ANDROID_HOME/licenses"
 #RUN echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
