@@ -14,7 +14,7 @@ ENV SDK_PACKAGES "build-tools-${VERSION_BUILD_TOOLS},android-${VERSION_TARGET_SD
 # --- Download Android SDK tools into $ANDROID_HOME
 #RUN cd /opt && wget -q https://dl.google.com/android/repository/tools_r${VERSION_SDK_TOOLS}-linux.zip -O android-sdk-tools.zip
 
-RUN cd /opt && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3952940.zip -O android-sdk-tools.zip 
+RUN cd /opt && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -O android-sdk-tools.zip 
 RUN cd /opt && unzip -q android-sdk-tools.zip
 RUN mkdir -p ${ANDROID_HOME}
 RUN cd /opt && mv tools/ ${ANDROID_HOME}/tools/
