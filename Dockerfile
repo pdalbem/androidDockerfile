@@ -17,7 +17,7 @@ ENV SDK_PACKAGES '"build-tools;${VERSION_BUILD_TOOLS}" "platforms;android-${VERS
 #RUN cd /opt && wget -q https://dl.google.com/android/repository/tools_r${VERSION_SDK_TOOLS}-linux.zip -O android-sdk-tools.zip
 
 RUN cd /opt \
-    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3952940.zip -O android-sdk-tools.zip \
+    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -O android-sdk-tools.zip \
     && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
     && rm -f android-sdk-tools.zip
 
