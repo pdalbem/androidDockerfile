@@ -6,7 +6,7 @@ RUN apt-get update -qq
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y  openjdk-8-jdk libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386
                                                                               
 ENV VERSION_SDK_TOOLS "25.2.5"
-ENV VERSION_BUILD_TOOLS "26.0.0"
+ENV VERSION_BUILD_TOOLS "26.0.1"
 ENV VERSION_TARGET_SDK "26"
 ENV SDK_PACKAGES "build-tools-${VERSION_BUILD_TOOLS},android-${VERSION_TARGET_SDK},addon-google_apis-google-${VERSION_TARGET_SDK},platform-tools,extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository"
 # ENV SDK_PACKAGES "build-tools-${VERSION_BUILD_TOOLS},android-${VERSION_TARGET_SDK},addon-google_apis-google-${VERSION_TARGET_SDK},platform-tools,extra-android-support,extra-android-m2repository,extra-google-google_play_services"
