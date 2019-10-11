@@ -6,8 +6,8 @@ RUN dpkg --add-architecture i386
 RUN apt-get update -qq
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y  openjdk-8-jdk libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386
                                                                               
-ENV VERSION_BUILD_TOOLS "28.0.3"
-ENV VERSION_TARGET_SDK "28"
+ENV VERSION_BUILD_TOOLS "29.0.2"
+ENV VERSION_TARGET_SDK "29"
 ENV SDK_PACKAGES '"build-tools;${VERSION_BUILD_TOOLS}" "platforms;android-${VERSION_TARGET_SDK}" "add-ons;addon-google_apis-google-${VERSION_TARGET_SDK}" "platform-tools" "extras:extra-android-m2repository" "extras;android;m2repository" "extras;google;google_play_services" "extras:google;m2repository"' 
 
 RUN cd /opt \
